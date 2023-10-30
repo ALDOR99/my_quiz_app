@@ -16,11 +16,23 @@ def quiz():
 
 
 def calculate_score(answers):
-    # Cevapları işleyerek puanı hesaplayın
-    # Örneğin, answers['question1'], answers['question2'], vb. kullanarak cevapları kontrol edebilirsiniz.
-    # Bu kısmı doldurmanız gerekiyor
-    # Pass ifadesi, fonksiyonu geçici olarak boş bırakmanıza olanak tanır.
-    pass
+    # Her sorunun doğru cevapları
+    correct_answers = {
+        'question1': 'John',  # İlk soru için doğru cevap
+        'question2': 'blue',  # İkinci soru için doğru cevap
+        'question3': 'dog'    # Üçüncü soru için doğru cevap
+    }
+
+    # Başlangıçta kullanıcının puanını 0 olarak ayarlayın
+    score = 0
+
+    # Kullanıcının verdiği cevapları doğru cevaplarla karşılaştırın
+    for question, user_answer in answers.items():
+        if question in correct_answers and user_answer == correct_answers[question]:
+            # Kullanıcının cevabı doğruysa, puanı artırın (örneğin 10 puan her soru için)
+            score += 10
+
+    return score
 
 
 def get_high_score():
