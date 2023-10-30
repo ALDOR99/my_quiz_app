@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+  </head>
+  <body>
+    <h1>Quiz</h1>
+    <form method="POST">
+      <!-- Soruları ve cevapları ekleyin -->
+      <h2>Question 1: What is your name?</h2>
+      <input type="text" name="username" />
+
+      <!-- Diğer sorular -->
+      <h2>Question 2: What is your favorite color?</h2>
+      <input type="radio" name="question1" value="red" /> Red<br />
+      <input type="radio" name="question1" value="blue" /> Blue<br />
+      <input type="radio" name="question1" value="green" /> Green<br />
+
+      <h2>Question 3: What is your favorite animal?</h2>
+      <input type="radio" name="question2" value="dog" /> Dog<br />
+      <input type="radio" name="question2" value="cat" /> Cat<br />
+      <input type="radio" name="question2" value="parrot" /> Parrot<br />
+
+      <h2>Question 4: Describe your hobbies or interests:</h2>
+      <textarea name="question3" rows="4" cols="50"></textarea>
+
+      <br />
+      <input type="submit" value="Submit Answers" />
+    </form>
+
+    <!-- User's best score in the top right corner -->
+    <div style="position: absolute; top: 10px; right: 10px">
+      <p>Best Score: {{ high_score }}%</p>
+    </div>
+
+    <!-- Footer with information about the author -->
+    <footer>Here information about author</footer>
+  </body>
+</html>
